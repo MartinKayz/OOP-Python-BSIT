@@ -1,3 +1,7 @@
+import numbers
+# from turtle import numinput
+
+
 print("Store Management System")
 
 # item1 = "Phone"
@@ -12,21 +16,23 @@ print("Store Management System")
 class Item:
     # Adding Behaviour to the objects
     def __init__(self,name, quantity, price):
-        # self.name = name
-        # self.quantity = quantity
-        # self.price = price
-        # print(f"Hey I have been created, \
-        # my name is {self.name} and my price is {self.price}")
-
+        self.name = name
+        self.quantity = quantity
+        self.price = price
         print("Hey, I have been created!")
 
     def calculate_discount(self, x, y):
         return x * y
 
+    
+    def __repr__(self):
+        return f"Item ('{self.name}', {self.price}, {self.quantity})"
+
+
 car = Item("Tesla", 100, 5000)
 gun = Item("M16", 30, 4000)
 
-print(car.calculate_discount("100", 8))
+# print(car.calculate_discount("100", 8))
 # Make sure the user enters only integers for the above method call
 
 
@@ -48,11 +54,6 @@ print(car.calculate_discount("100", 8))
 # print(phone.name)
 # print(phone.price)
 # print(phone.version)
-
-
-
-
-
 
 
 
